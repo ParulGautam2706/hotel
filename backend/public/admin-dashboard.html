@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Hotels</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" href="assets/hotel logo.png">
+  <script src="assets/js/app.js" defer></script>
+
+</head>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    auth.requireAdmin(); // ✅ sirf admin hi aa payega
+  });
+</script>
+
+<body>
+  <header>
+    <body class="admin-page">
+  <div class="admin-container">
+
+    <!-- Left: Manage Hotels -->
+    <div class="manage-hotels">
+      <h3>Manage Hotels</h3>
+      <form id="hotelForm">
+        <input type="text" placeholder="Hotel Name" required>
+        <input type="text" placeholder="City" required>
+        <input type="number" placeholder="Price" required>
+        <input type="text" placeholder="Image URL" required>
+        <textarea placeholder="Description" required></textarea>
+        <button type="submit">Add Hotel</button>
+      </form>
+    </div>
+ <a href="#" id="logoutBtn">Logout</a>
+    <!-- Right: Manage Users & Bookings -->
+    <div class="sidebar">
+      <a href="/manage-users.html">👤 Manage Users</a>
+      <a href="/manage-bookings.html">📑 Manage Bookings</a>
+    </div>
+
+  </div>
+</body>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard | ROYAL HOTELS</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/script.js" defer></script>
+  <link rel="icon" type="image/png" href="assets/hotel logo.png">
+<script src="assets/js/app.js" defer></script>
+
+</head>
+<body class="admin-page">
+   <h1>Welcome, <span id="userName">Admin</span> 👑</h1>
+  <div class="admin-container">
+    <div class="manage-hotels">
+      <h3>Manage Hotels</h3>
+      <form id="hotelForm">
+        <input type="text" placeholder="Hotel Name" required>
+        <input type="text" placeholder="City" required>
+        <input type="number" placeholder="Price" required>
+        <input type="text" placeholder="Image URL" required>
+        <textarea placeholder="Description" required></textarea>
+        <button type="submit">Add Hotel</button>
+      </form>
+    </div>
+
+    <div class="sidebar">
+      <a href="/manage-users.html">👤 Manage Users</a>
+      <a href="/manage-bookings.html">📑 Manage Bookings</a>
+    </div>
+  </div>
+</body>
+<script>
+  auth.requireAdmin();
+</script>
+<script>
+  auth.requireAdmin(); // only access admin
+</script>
+
+</html>
