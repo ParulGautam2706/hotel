@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile | ROYAL HOTELS</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" type="image/png" href="assets/hotel logo.png">
+  <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/navbar.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #7ef3da;
+      margin: 0;
+      padding: 0;
+    }
+    .profile-container {
+      max-width: 600px;
+      margin: 5% auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .profile-container h2 {
+      margin-bottom: 1rem;
+    }
+    .profile-card {
+      text-align: left;
+      margin-top: 1.5rem;
+    }
+    .profile-card p {
+      font-size: 1.1rem;
+      margin: 0.5rem 0;
+    }
+    #logoutBtn {
+      display: inline-block;
+      margin-top: 2rem;
+      background: #ff4b5c;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    #logoutBtn:hover {
+      background: #e8414d;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-container">
+    <h2>👤 User Profile</h2>
+    <div class="profile-card">
+      <p><strong>Name:</strong> <span id="profileName">-</span></p>
+      <p><strong>Email:</strong> <span id="profileEmail">-</span></p>
+      <p><strong>Role:</strong> <span id="profileRole">-</span></p>
+    </div>
+    <button id="logoutBtn">Logout</button>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Require login
+      window.auth.requireLogin();
+
+      // Get current user
+      const user = getCurrentUser();
+
+      if (user) {
+        document.getElementById("profileName").textContent = user.name || "Guest";
+        document.getElementById("profileEmail").textContent = user.email || "-";
+        document.getElementById("profileRole").textContent = user.role || "user";
+      }
+    });
+  </script>
+</body>
+</html>
