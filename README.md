@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🏨 Hotel Booking System
 
 This is a full-stack hotel booking website where users can explore hotels, book rooms, and manage their bookings.
@@ -100,3 +101,6 @@ http://localhost:8080
 ## 🙋‍♀️ Author
 
 Santosh Gautam
+=======
+# hotel
+>>>>>>> 98db9b6e2871002e286337b6ff694508bfd567dc
