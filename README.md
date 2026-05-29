@@ -191,7 +191,7 @@ Add screenshots here:
 
 ### Admin Dashboard
 
-[AdminDashboard](backend/public/assets/admin dashboard.png)
+[AdminDashboard]("backend/public/assets/admin dashboard.png")
 [AdminManageBooking](backend/public/assets/admin phase2.png)
 [AdminMangeUsers](backend/public/assets/admin phase1.png)
 
