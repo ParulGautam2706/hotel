@@ -86,7 +86,8 @@ hotel/
 
 ## Database
 
-* MongoDB (if used)
+* MongoDB
+
 
 ## Other Tools
 
@@ -177,7 +178,7 @@ node src/index.js
 
 ---
 
-# 📸 Screenshots
+## 📸 Screenshots
 
 Add screenshots here:
 
