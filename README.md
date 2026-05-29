@@ -183,29 +183,29 @@ node src/index.js
 Add screenshots here:
 
 ### Homepage
-![Home](backend/public/assets/home-page.png)
+![Home](./backend/public/assets/home-page.png)
 
 ### Booking Page
-![Booking Page](backend/public/assets/booking-page.png)
+![Booking Page](./backend/public/assets/booking-page.png)
 
 ### Admin Dashboard
-![AdminDashboard](backend/public/assets/admin-dashboard.png)
+![AdminDashboard](./backend/public/assets/admin-dashboard.png)
 
-![AdminManageBooking](backend/public/assets/admin-phase2.png)
+![AdminManageBooking](./backend/public/assets/admin-phase2.png)
 
-![AdminManageUsers](backend/public/assets/admin-phase1.png)
+![AdminManageUsers](./backend/public/assets/admin-phase1.png)
 
 ### User Dashboard
-![UserDashboard](backend/public/assets/user-dashboard.png)
+![UserDashboard](./backend/public/assets/user-dashboard.png)
 
-![UserProfile](backend/public/assets/user-profile.png)
+![UserProfile](./backend/public/assets/user-profile.png)
 
-![UserBooking](backend/public/assets/user-phase1.png)
+![UserBooking](./backend/public/assets/user-phase1.png)
 
-![UserCancellation](backend/public/assets/user-phase2.png)
+![UserCancellation](./backend/public/assets/user-phase2.png)
 
 ### Hotel Listing Page
-![Hotels](backend/public/assets/hotel-listing-page.png)
+![Hotels](./backend/public/assets/hotel-listing-page.png)
 ---
 
 # 🔮 Future Improvements
