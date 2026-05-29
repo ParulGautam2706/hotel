@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Details | ROYAL HOTELS</title>
+  <link rel="icon" href="assets/hotel logo.png">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/app.js" defer></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #00e5ff, #00ff95);
+    }
+    .hotel-detail {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,.08);
+      overflow: hidden;
+    }
+    .hotel-image {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    .hotel-info {
+      padding: 2rem;
+    }
+    .hotel-name {
+      font-size: 2rem;
+      margin: 0 0 1rem 0;
+      color: #333;
+    }
+    .hotel-price {
+      font-size: 1.5rem;
+      color: #00e5ff;
+      font-weight: bold;
+      margin: 0 0 1rem 0;
+    }
+    .hotel-description {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #666;
+      margin-bottom: 2rem;
+    }
+    .hotel-location {
+      font-size: 1.2rem;
+      color: #888;
+      margin-bottom: 2rem;
+    }
+    .btn-book {
+      background: #00e5ff;
+      color: #000;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .btn-book:hover {
+      background: #00c4d4;
+    }
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #666;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+    .back-btn:hover {
+      color: #333;
+    }
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right:0; bottom:0;
+      background: rgba(0,0,0,0.5);
+      justify-content:center;
+      align-items:center;
+    }
+    .modal-content {
+      background:#fff;
+      padding:2rem;
+      border-radius:12px;
+      width:100%;
+      max-width:400px;
+      box-shadow:0 6px 20px rgba(0,0,0,.2);
+      text-align:center;
+      position: relative;
+    }
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      cursor:pointer;
+      font-size:20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="hotel-detail">
+    <img id="hotelImage" class="hotel-image" src="" alt="Hotel Image">
+    <div class="hotel-info">
+      <a href="explore.html" class="back-btn">← Back to Explore</a>
+      <h1 id="hotelName" class="hotel-name"></h1>
+      <p id="hotelLocation" class="hotel-location"></p>
+      <p id="hotelPrice" class="hotel-price"></p>
+      <p id="hotelDescription" class="hotel-description"></p>
+
+      <!-- Just one button instead of inline form -->
+      <button id="openBookingModal" class="btn-book">Book Now</button>
+    </div>
+  </div>
+
+  <!-- Booking Form Modal -->
+  <div id="bookingModal" class="modal">
+    <div class="modal-content">
+      <span onclick="closeBookingModal()" class="close-btn">&times;</span>
+      <h3 id="modalHotelName">Book Your Stay</h3>
+      <label>Check-In Date:</label>
+      <input type="date" id="checkIn"><br><br>
+      <label>Check-Out Date:</label>
+      <input type="date" id="checkOut"><br><br>
+      <button class="btn-book" onclick="bookHotel()">Confirm Booking</button>
+    </div>
+  </div>
+
+  <!-- Booking Confirmation Modal -->
+  <div id="confirmModal" class="modal">
+    <div class="modal-content">
+      <span onclick="closeConfirmModal()" class="close-btn">&times;</span>
+      <h3>Booking Confirmed ✅</h3>
+      <p id="confirmDetails"></p>
+      <div style="margin-top:1rem; display:flex; gap:10px; justify-content:center;">
+        <button onclick="goToBookings()"
+  style="background:#00e5ff;color:#000;border:none;padding:10px 20px;
+  border-radius:8px;cursor:pointer;">
+  My Bookings
+</button>
+        <button onclick="closeConfirmModal()" 
+          style="background:#ccc;color:#000;border:none;padding:10px 20px;
+          border-radius:8px;cursor:pointer;">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+<script src="assets/js/data.js"></script>
+<script>
+  function getHotelIdFromUrl() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return parseInt(urlParams.get('id'));
+  }
+
+  function loadHotelDetails() {
+    const hotelId = getHotelIdFromUrl();
+    const hotel = hotels.find(h => h.id === hotelId);
+
+    if (!hotel) {
+      document.body.innerHTML = "<h1>Hotel not found</h1>";
+      return;
+    }
+
+    document.getElementById('hotelName').textContent = hotel.name;
+    document.getElementById('hotelLocation').textContent = "Location: " + hotel.city;
+    document.getElementById('hotelPrice').textContent = "$" + hotel.price + " per night";
+    document.getElementById('hotelDescription').textContent = hotel.description;
+    document.getElementById('hotelImage').src = hotel.image;
+    document.getElementById('modalHotelName').textContent = "Book Your Stay at " + hotel.name;
+  }
+
+  // --- Modal open/close ---
+  document.getElementById("openBookingModal").addEventListener("click", () => {
+    document.getElementById("bookingModal").style.display = "flex";
+  });
+
+  function closeBookingModal() {
+    document.getElementById("bookingModal").style.display = "none";
+  }
+
+  // --- Booking logic ---
+  function bookHotel() {
+    const hotelId = getHotelIdFromUrl();
+    const hotel = hotels.find(h => h.id === hotelId);
+    const checkIn = document.getElementById('checkIn').value;
+    const checkOut = document.getElementById('checkOut').value;
+
+    if (!checkIn || !checkOut) {
+      alert("Please select dates!");
+      return;
+    }
+    if (new Date(checkOut) <= new Date(checkIn)) {
+      alert("Check-out date must be after check-in date!");
+      return;
+    }
+
+    const nights = calculateNights(checkIn, checkOut);
+    const total = hotel.price * nights;
+
+    let bookings = JSON.parse(localStorage.getItem("bookings")) || [];
+    bookings.push({
+      id: Date.now(),
+      user: "Guest",
+      hotel: hotel.name,
+      checkIn,
+      checkOut,
+      status: "Confirmed",
+      amount: total
+    });
+    localStorage.setItem("bookings", JSON.stringify(bookings));
+
+    closeBookingModal(); // close booking form
+
+    // Show confirmation modal
+    document.getElementById("confirmDetails").innerHTML =
+      `<strong>${hotel.name}</strong><br>
+      From: ${checkIn} To: ${checkOut}<br>
+      Nights: ${nights} <br>
+      Total: $${total}`;
+    document.getElementById("confirmModal").style.display = "flex";
+  }
+
+  function calculateNights(checkIn, checkOut) {
+    const start = new Date(checkIn);
+    const end = new Date(checkOut);
+    return Math.ceil((end - start) / (1000 * 60 * 60 * 24));
+  }
+
+  function closeConfirmModal() {
+    document.getElementById("confirmModal").style.display = "none";
+  }
+
+  window.onload = loadHotelDetails;
+</script>
+<script src="assets/js/navbar.js"></script>
+
+<script>
+  function goToBookings() {
+    window.location.href = "bookings.html";
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Bookings | ROYAL HOTELS</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" type="image/png" href="assets/hotel logo.png">
+
+  <!-- Load app.js first -->
+  <script src="assets/js/app.js"></script>
+</head>
+<body>
+  <div class="page-wrapper">
+    <div class="page-card">
+      <h2>📘 My Bookings</h2>
+
+      <!-- Active bookings table -->
+      <table class="styled-table" id="bookingTable">
+        <thead>
+          <tr>
+            <th>User</th>
+            <th>Hotel</th>
+            <th>Check-In</th>
+            <th>Check-Out</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Active bookings will load here -->
+        </tbody>
+      </table>
+
+      <!-- Add new booking form -->
+      <h3 style="margin-top:20px;">➕ Add New Booking</h3>
+      <form id="addBookingForm" style="margin-top:10px;">
+        <label>
+          Hotel:
+          <input type="text" id="hotelInput" required>
+        </label>
+        <br><br>
+        <label>
+          Check-In:
+          <input type="date" id="checkInInput" required>
+        </label>
+        <br><br>
+        <label>
+          Check-Out:
+          <input type="date" id="checkOutInput" required>
+        </label>
+        <br><br>
+        <button type="submit">Add Booking</button>
+      </form>
+
+      <!-- Link to cancelled bookings page -->
+      <a href="cancelled-bookings.html" class="cancel-btn" style="margin-top:15px; display:inline-block;">
+        View Cancelled Bookings
+      </a>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/myBookings.js"></script>
+  <script src="assets/js/seed.js"></script>
+</body>
+</html>

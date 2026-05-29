@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Manage Users</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" href="assets/hotel logo.png">
+  <script src="assets/js/app.js" defer></script>
+  <script>
+  window.auth.requireAdmin();
+</script>
+<style>
+  /* Add User Form */
+.add-user-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* mobile friendly */
+  align-items: center;
+}
+
+.add-user-form input,
+.add-user-form select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  flex: 1;
+  min-width: 180px;
+}
+
+.add-user-form button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.add-user-form button:hover {
+  background: #0056b3;
+}
+
+</style>
+</head>
+<div class="page-wrapper">
+  <div class="page-card">
+  <h2>👥 Manage Users</h2>
+ <a href="admin-dashboard.html" class="admin-dashboard-btn" style="margin-top:15px; display:inline-block;">
+  Admin Dashboard
+</a><br>
+<a href="manage-bookings.html" class="manage-booking-btn" style="margin-top:15px; display:inline-block;">
+  Manage Bookings
+</a>
+  <!-- Add New User Form -->
+  <form id="addUserForm" class="add-user-form">
+    <input type="text" id="username" placeholder="Enter Name" required>
+    <input type="email" id="email" placeholder="Enter Email" required>
+    <select id="role">
+      <option value="user">User</option>
+      <option value="admin">Admin</option>
+    </select>
+    <button type="submit">Add User</button>
+  </form>
+
+  <table class="styled-table" id="usersTable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Role</th>
+        <th>Account</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Users will load here -->
+    </tbody>
+  </table>
+</div>
+</div>
+
+  <!-- Correct path -->
+  <script src="assets/js/manageUsers.js"></script>
+</body>
+</html>

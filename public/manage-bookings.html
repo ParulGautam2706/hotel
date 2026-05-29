@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Manage Bookings | ROYAL HOTELS</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" href="assets/hotel logo.png">
+  <link rel="stylesheet" href="assets/hotel logo.png">
+
+</head>
+ <script src="assets/js/app.js" defer></script>
+  
+  <script>
+  window.auth.requireAdmin();
+</script>
+<body>
+<div class="page-wrapper">
+  <div class="page-card">
+  <h2>📋 Manage Bookings</h2>
+  <a href="admin-dashboard.html" class="admin-dashboard-btn" style="margin-top:15px; display:inline-block;">
+  Admin Dashboard
+</a><br>
+<a href="manage-users.html" class="manage user-btn" style="margin-top:15px; display:inline-block;">
+  Manage Users
+</a>
+  <table class="styled-table" id="bookingsTable">
+    <thead>
+      <tr>
+        <th>User</th>
+        <th>Hotel</th>
+        <th>Check-In</th>
+        <th>Check-Out</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody id="manageBookingsTable">  <!-- js will load here --></tbody>
+  </table>
+</div>
+</div>
+
+  <script src="assets/js/managebookings.js"></script>
+</body>
+</html>
