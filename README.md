@@ -86,7 +86,7 @@ hotel/
 
 ## Database
 
-* MongoDB (if used)
+* MongoDB 
 
 ## Other Tools
 
