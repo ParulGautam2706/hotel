@@ -169,7 +169,7 @@ node src/index.js
 
 ---
 
-# 🔐 Authentication & Security
+# 🔐 Authentication &ackend/public/assets Security
 
 * Login Authentication
 * Middleware Protection
@@ -183,29 +183,29 @@ node src/index.js
 Add screenshots here:
 
 ### Homepage
-![Home](./backend/public/assets/home-page.png)
+![Home](src/home-page.png)
 
 ### Booking Page
-![Booking Page](backend/public/assets/booking-page.png)
+![Booking Page](src/booking-page.png)
 
 ### Admin Dashboard
-![AdminDashboard](backend/public/assets/admin-dashboard.png)
+![AdminDashboard](src/admin-dashboard.png)
 
-![AdminManageBooking](backend/public/assets/admin-phase2.png)
+![AdminManageBooking](src/admin-phase2.png)
 
-![AdminManageUsers](backend/public/assets/admin-phase1.png)
+![AdminManageUsers](src/admin-phase1.png)
 
 ### User Dashboard
-![UserDashboard](backend/public/assets/user-dashboard.png)
+![UserDashboard](src/user-dashboard.png)
 
-![UserProfile](backend/public/assets/user-profile.png)
+![UserProfile](src/user-profile.png)
 
-![UserBooking](backend/public/assets/user-phase1.png)
+![UserBooking](src/user-phase1.png)
 
-![UserCancellation](backend/public/assets/user-phase2.png)
+![UserCancellation](src/user-phase2.png)
 
 ### Hotel Listing Page
-![Hotels](backend/public/assets/hotel-listing-page.png)
+![Hotels](src/hotel-listing-page.png)
 ---
 
 # 🔮 Future Improvements
