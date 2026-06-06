@@ -198,8 +198,6 @@ Add screenshots here:
 ### User Dashboard
 ![UserDashboard](src/user-dashboard.png)
 
-![UserProfile](src/user-profile.png)
-
 ![UserBooking](src/user-phase1.png)
 
 ![UserCancellation](src/user-phase2.png)
