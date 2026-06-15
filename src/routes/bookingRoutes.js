@@ -1,5 +1,5 @@
 import express from "express";
-import Booking from "../models/booking.js";
+import Booking from "../models/Booking.js";
 import Hotel from "../models/Hotel.js";
 import User from "../models/User.js";
 
