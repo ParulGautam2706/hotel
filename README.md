@@ -188,19 +188,29 @@ Add screenshots here:
 ### Booking Page
 ![Booking Page](src/booking-page.png)
 
+## 📸 Screenshots
+
+### Homepage
+![Home](src/home-page.png)
+
+### Booking Page
+![Booking Page](src/booking-page.png)
+
 ### Admin Dashboard
-![AdminDashboard](src/admin-dashboard.png)
+![Admin Dashboard](src/admin-dashboard.png)
 
-![AdminManageBooking](src/admin-phase2.png)
+![Manage Bookings](src/admin-phase2.png)
 
-![AdminManageUsers](src/admin-phase1.png)
+![Manage Users](src/admin-phase1.png)
 
 ### User Dashboard
-![UserDashboard](src/user-dashboard.png)
+![User Dashboard](src/user-dashboard.png)
 
-![UserBooking](src/user-phase1.png)
+![User Profile](src/user-profile.png)
 
-![UserCancellation](src/user-phase2.png)
+![User Booking](src/user-phase1.png)
+
+![User Cancellation](src/user-phase2.png)
 
 ### Hotel Listing Page
 ![Hotels](src/hotel-listing-page.png)
