@@ -174,43 +174,7 @@ node src/index.js
 * Middleware Protection
 * Environment Variables Security
 * Protected Admin Routes
-
----
-
-# 📸 Screenshots
-
-Add screenshots here:
-
-### Homepage
-
-![Home](src/home page.png)
-
-### Booking Page
-
-![Booking Page](src/booking page.png)
-
-### Admin Dashboard
-
-![AdminDashboard](src/admin dashboard.png)
-
-![AdminManageBooking](src/admin phase2.png)
-
-![AdminMangeUsers](src/admin phase1.png)
-
-### User Dashboard 
-
-![UserDashboard](src/user dashboard.png)
-
-![UserProfile](src/user profile.png)
-
-![UserBooking](src/user phase1.png)
-
-![UserCancellation](src/user phase2.png)
-
-### Hotel Listing Page
-
-![Hotels](src/hotel listing page.png)
-
+  
 ---
 
 # 🔮 Future Improvements
