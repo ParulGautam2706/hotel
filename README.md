@@ -31,7 +31,6 @@ This project provides hotel room exploration, booking management, user authentic
 
 # 📂 Project Structure
 
-```bash id="b2nq8x"
 hotel/
 │
 ├── backend/
@@ -67,7 +66,6 @@ hotel/
 │   ├── package-lock.json
 │   ├── README.md
 │   └── serve.js
-```
 
 ---
 
@@ -101,25 +99,19 @@ hotel/
 
 ## 1️⃣ Clone Repository
 
-```bash id="5n4crh"
 git clone https://github.com/your-username/hotel-booking-website.git
-```
 
 ---
 
 ## 2️⃣ Move to Project Directory
 
-```bash id="q4f9vf"
 cd hotel/backend
-```
 
 ---
 
 ## 3️⃣ Install Dependencies
 
-```bash id="l81o3k"
 npm install
-```
 
 ---
 
@@ -127,27 +119,11 @@ npm install
 
 Create a `.env` file inside backend folder.
 
-Example:
-
-```env id="5j1r5o"
-PORT=5000
-MONGO_URI=your_mongodb_connection
-JWT_SECRET=your_secret_key
-```
-
 ---
 
 ## 5️⃣ Start Server
 
-```bash id="vvdk71"
 npm start
-```
-
-OR
-
-```bash id="ij8z9j"
-node src/index.js
-```
 
 ---
 
