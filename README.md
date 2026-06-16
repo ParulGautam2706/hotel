@@ -197,7 +197,7 @@ Add screenshots here:
 ![Booking Page](src/booking-page.png)
 
 ### Admin Dashboard
-![Admin Dashboard](src/admin-dashboard.png)
+![Admin Dashboard](src/admindashboard.png)
 
 ![Manage Bookings](src/admin-phase2.png)
 
