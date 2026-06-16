@@ -159,20 +159,19 @@ npm start
 Add screenshots here:
 
 ### Homepage
+
 ![Home](src/home-page.png)
 
 ### Booking Page
+
 ![Booking Page](src/booking-page.png)
 
-## 📸 Screenshots
-
-### Homepage
-![Home](src/home-page.png)
-
 ### Booking Page
+
 ![Booking Page](src/booking-page.png)
 
 ### Admin Dashboard
+
 ![Admin Dashboard](src/admindashboard.png)
 
 ![Manage Bookings](src/admin-phase2.png)
@@ -180,16 +179,17 @@ Add screenshots here:
 ![Manage Users](src/admin-phase1.png)
 
 ### User Dashboard
-![User Dashboard](src/user-dashboard.png)
 
-![User Profile](src/user-profile.png)
+![User Dashboard](src/user-dashboard.png)
 
 ![User Booking](src/user-phase1.png)
 
 ![User Cancellation](src/user-phase2.png)
 
 ### Hotel Listing Page
+
 ![Hotels](src/hotel-listing-page.png)
+
 ---
 
 # 🔮 Future Improvements
